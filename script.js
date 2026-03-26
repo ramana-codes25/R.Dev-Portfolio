@@ -171,8 +171,12 @@ document.getElementById('sendBtn').addEventListener('click', async function () {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        access_key: 'YOUR_KEY',
-        name, email, message
+        access_key: '6a61726c-36f6-4a31-a988-ebd86b30823f',
+        name,
+          email,
+          message,
+          subject: "Portfolio Contact",
+          from_name: name
       })
     });
 
@@ -194,3 +198,10 @@ document.getElementById('sendBtn').addEventListener('click', async function () {
   }, 3000);
 
 });
+
+
+const email = "ramana.network24@gmail.com";
+
+function mailNow() {
+  window.location.href = "mailto:" + email;
+}
